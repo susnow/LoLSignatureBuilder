@@ -1,0 +1,13 @@
+c:\users\administrator\documents\visual studio 2012\Projects\SignatureBuilder\SignatureBuilder\bin\Debug\SignatureBuilder.exe.config
+c:\users\administrator\documents\visual studio 2012\Projects\SignatureBuilder\SignatureBuilder\bin\Debug\SignatureBuilder.exe
+c:\users\administrator\documents\visual studio 2012\Projects\SignatureBuilder\SignatureBuilder\bin\Debug\SignatureBuilder.pdb
+c:\users\administrator\documents\visual studio 2012\Projects\SignatureBuilder\SignatureBuilder\obj\Debug\SignatureBuilder.TemplateForm.resources
+c:\users\administrator\documents\visual studio 2012\Projects\SignatureBuilder\SignatureBuilder\obj\Debug\SignatureBuilder.Properties.Resources.resources
+c:\users\administrator\documents\visual studio 2012\Projects\SignatureBuilder\SignatureBuilder\obj\Debug\SignatureBuilder.csproj.GenerateResource.Cache
+c:\users\administrator\documents\visual studio 2012\Projects\SignatureBuilder\SignatureBuilder\obj\Debug\SignatureBuilder.exe
+c:\users\administrator\documents\visual studio 2012\Projects\SignatureBuilder\SignatureBuilder\obj\Debug\SignatureBuilder.pdb
+c:\users\administrator\documents\visual studio 2012\Projects\SignatureBuilder\SignatureBuilder\obj\Debug\SignatureBuilder.Loading.resources
+C:\Users\Administrator\Documents\Visual Studio 2012\Projects\SignatureBuilder\SignatureBuilder\obj\Debug\SignatureBuilder.MainForm.resources
+C:\Users\Administrator\Documents\Visual Studio 2012\Projects\SignatureBuilder\SignatureBuilder\obj\Debug\SignatureBuilder.About.resources
+C:\Users\Administrator\Documents\Visual Studio 2012\Projects\SignatureBuilder\SignatureBuilder\obj\Debug\SignatureBuilder.Config.resources
+C:\Users\Administrator\Documents\Visual Studio 2012\Projects\SignatureBuilder\SignatureBuilder\obj\Debug\SignatureBuilder.Snapshot.resources
