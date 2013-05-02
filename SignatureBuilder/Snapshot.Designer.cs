@@ -44,6 +44,8 @@
             this.SaveButton = new System.Windows.Forms.Label();
             this.cancelButton = new System.Windows.Forms.Label();
             this.LoginSeverList = new System.Windows.Forms.Panel();
+            this.sv22 = new System.Windows.Forms.Label();
+            this.sv21 = new System.Windows.Forms.Label();
             this.sv20 = new System.Windows.Forms.Label();
             this.sv19 = new System.Windows.Forms.Label();
             this.sv18 = new System.Windows.Forms.Label();
@@ -102,11 +104,8 @@
             this.FD = new System.Windows.Forms.FontDialog();
             this.CB_Rank = new System.Windows.Forms.CheckBox();
             this.RankMode = new System.Windows.Forms.Panel();
-            this.rb_teamrank = new System.Windows.Forms.RadioButton();
-            this.rb_solorank = new System.Windows.Forms.RadioButton();
-            this.rb_fight = new System.Windows.Forms.RadioButton();
-            this.sv21 = new System.Windows.Forms.Label();
-            this.sv22 = new System.Windows.Forms.Label();
+            this.rb_WinPoint = new System.Windows.Forms.RadioButton();
+            this.rb_Level = new System.Windows.Forms.RadioButton();
             this.ShotPanel.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.fontTextBindingSource)).BeginInit();
             this.LoginSeverList.SuspendLayout();
@@ -351,6 +350,26 @@
             this.LoginSeverList.Size = new System.Drawing.Size(361, 170);
             this.LoginSeverList.TabIndex = 101;
             this.LoginSeverList.Visible = false;
+            // 
+            // sv22
+            // 
+            this.sv22.AutoSize = true;
+            this.sv22.Font = new System.Drawing.Font("微软雅黑", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.sv22.Location = new System.Drawing.Point(193, 140);
+            this.sv22.Name = "sv22";
+            this.sv22.Size = new System.Drawing.Size(68, 17);
+            this.sv22.TabIndex = 106;
+            this.sv22.Text = "费雷尔卓德";
+            // 
+            // sv21
+            // 
+            this.sv21.AutoSize = true;
+            this.sv21.Font = new System.Drawing.Font("微软雅黑", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.sv21.Location = new System.Drawing.Point(102, 140);
+            this.sv21.Name = "sv21";
+            this.sv21.Size = new System.Drawing.Size(68, 17);
+            this.sv21.TabIndex = 105;
+            this.sv21.Text = "费雷尔卓德";
             // 
             // sv20
             // 
@@ -976,86 +995,51 @@
             this.CB_Rank.Font = new System.Drawing.Font("微软雅黑", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
             this.CB_Rank.Location = new System.Drawing.Point(171, 15);
             this.CB_Rank.Name = "CB_Rank";
-            this.CB_Rank.Size = new System.Drawing.Size(101, 21);
+            this.CB_Rank.Size = new System.Drawing.Size(96, 21);
             this.CB_Rank.TabIndex = 112;
-            this.CB_Rank.Text = "排位分/战斗力";
+            this.CB_Rank.Text = "所在组&胜点数";
             this.CB_Rank.UseVisualStyleBackColor = false;
             this.CB_Rank.CheckedChanged += new System.EventHandler(this.CB_Rank_CheckedChanged);
             // 
             // RankMode
             // 
             this.RankMode.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.RankMode.Controls.Add(this.rb_teamrank);
-            this.RankMode.Controls.Add(this.rb_solorank);
-            this.RankMode.Controls.Add(this.rb_fight);
+            this.RankMode.Controls.Add(this.rb_WinPoint);
+            this.RankMode.Controls.Add(this.rb_Level);
             this.RankMode.Location = new System.Drawing.Point(401, 229);
             this.RankMode.Name = "RankMode";
-            this.RankMode.Size = new System.Drawing.Size(102, 79);
+            this.RankMode.Size = new System.Drawing.Size(102, 58);
             this.RankMode.TabIndex = 113;
             this.RankMode.Visible = false;
             this.RankMode.VisibleChanged += new System.EventHandler(this.RankMode_VisibleChanged);
             // 
-            // rb_teamrank
+            // rb_WinPoint
             // 
-            this.rb_teamrank.AutoSize = true;
-            this.rb_teamrank.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.rb_teamrank.Font = new System.Drawing.Font("微软雅黑", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.rb_teamrank.Location = new System.Drawing.Point(16, 50);
-            this.rb_teamrank.Name = "rb_teamrank";
-            this.rb_teamrank.Size = new System.Drawing.Size(73, 21);
-            this.rb_teamrank.TabIndex = 2;
-            this.rb_teamrank.TabStop = true;
-            this.rb_teamrank.Text = "组队排位";
-            this.rb_teamrank.UseVisualStyleBackColor = true;
-            this.rb_teamrank.CheckedChanged += new System.EventHandler(this.rb_teamrank_CheckedChanged);
+            this.rb_WinPoint.AutoSize = true;
+            this.rb_WinPoint.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.rb_WinPoint.Font = new System.Drawing.Font("微软雅黑", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.rb_WinPoint.Location = new System.Drawing.Point(16, 28);
+            this.rb_WinPoint.Name = "rb_WinPoint";
+            this.rb_WinPoint.Size = new System.Drawing.Size(49, 21);
+            this.rb_WinPoint.TabIndex = 1;
+            this.rb_WinPoint.TabStop = true;
+            this.rb_WinPoint.Text = "胜点";
+            this.rb_WinPoint.UseVisualStyleBackColor = true;
+            this.rb_WinPoint.CheckedChanged += new System.EventHandler(this.rb_solorank_CheckedChanged);
             // 
-            // rb_solorank
+            // rb_Level
             // 
-            this.rb_solorank.AutoSize = true;
-            this.rb_solorank.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.rb_solorank.Font = new System.Drawing.Font("微软雅黑", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.rb_solorank.Location = new System.Drawing.Point(16, 28);
-            this.rb_solorank.Name = "rb_solorank";
-            this.rb_solorank.Size = new System.Drawing.Size(73, 21);
-            this.rb_solorank.TabIndex = 1;
-            this.rb_solorank.TabStop = true;
-            this.rb_solorank.Text = "单人排位";
-            this.rb_solorank.UseVisualStyleBackColor = true;
-            this.rb_solorank.CheckedChanged += new System.EventHandler(this.rb_solorank_CheckedChanged);
-            // 
-            // rb_fight
-            // 
-            this.rb_fight.AutoSize = true;
-            this.rb_fight.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.rb_fight.Font = new System.Drawing.Font("微软雅黑", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.rb_fight.Location = new System.Drawing.Point(16, 6);
-            this.rb_fight.Name = "rb_fight";
-            this.rb_fight.Size = new System.Drawing.Size(61, 21);
-            this.rb_fight.TabIndex = 0;
-            this.rb_fight.TabStop = true;
-            this.rb_fight.Text = "战斗力";
-            this.rb_fight.UseVisualStyleBackColor = true;
-            this.rb_fight.CheckedChanged += new System.EventHandler(this.rb_fight_CheckedChanged);
-            // 
-            // sv21
-            // 
-            this.sv21.AutoSize = true;
-            this.sv21.Font = new System.Drawing.Font("微软雅黑", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.sv21.Location = new System.Drawing.Point(102, 140);
-            this.sv21.Name = "sv21";
-            this.sv21.Size = new System.Drawing.Size(68, 17);
-            this.sv21.TabIndex = 105;
-            this.sv21.Text = "费雷尔卓德";
-            // 
-            // sv22
-            // 
-            this.sv22.AutoSize = true;
-            this.sv22.Font = new System.Drawing.Font("微软雅黑", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.sv22.Location = new System.Drawing.Point(193, 140);
-            this.sv22.Name = "sv22";
-            this.sv22.Size = new System.Drawing.Size(68, 17);
-            this.sv22.TabIndex = 106;
-            this.sv22.Text = "费雷尔卓德";
+            this.rb_Level.AutoSize = true;
+            this.rb_Level.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.rb_Level.Font = new System.Drawing.Font("微软雅黑", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.rb_Level.Location = new System.Drawing.Point(16, 6);
+            this.rb_Level.Name = "rb_Level";
+            this.rb_Level.Size = new System.Drawing.Size(61, 21);
+            this.rb_Level.TabIndex = 0;
+            this.rb_Level.TabStop = true;
+            this.rb_Level.Text = "所在组";
+            this.rb_Level.UseVisualStyleBackColor = true;
+            this.rb_Level.CheckedChanged += new System.EventHandler(this.rb_fight_CheckedChanged);
             // 
             // Snapshot
             // 
@@ -1193,9 +1177,8 @@
         public System.Windows.Forms.Panel RankName;
         private System.Windows.Forms.Label sv19;
         private System.Windows.Forms.Panel RankMode;
-        private System.Windows.Forms.RadioButton rb_teamrank;
-        private System.Windows.Forms.RadioButton rb_solorank;
-        private System.Windows.Forms.RadioButton rb_fight;
+        private System.Windows.Forms.RadioButton rb_WinPoint;
+        private System.Windows.Forms.RadioButton rb_Level;
         private System.Windows.Forms.Label sv20;
         private System.Windows.Forms.Label sv22;
         private System.Windows.Forms.Label sv21;

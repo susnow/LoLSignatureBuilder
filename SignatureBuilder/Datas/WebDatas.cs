@@ -15,23 +15,29 @@ namespace SignatureBuilder.Datas
             wb.Credentials = CredentialCache.DefaultCredentials;
             Byte[] data = wb.DownloadData("http://lolbox.duowan.com/playerDetail.php?serverName=" + severName + "&playerName=" + summorName);
             string html = Encoding.UTF8.GetString(data);
-            Regex regFight = new Regex(@"(?s)<p><em><span title=.*?>(\d*)</span></em></p>");
-            Match mcFight = regFight.Match(html);
-            this.Fight = mcFight.Groups[1].Value == "0" ? "无" : mcFight.Groups[1].Value;
+            Regex regData = new Regex(@"(?m)<td>5v5单双排</td>\s+<td><span title=.*?>([\S\s]*?)</td>\s+<td>(\d*)");
+            Match mcData = regData.Match(html);
+            this.Level = mcData.Groups[1].Value == "" ? "" : mcData.Groups[1].Value;
+            this.WinPoint = mcData.Groups[2].Value == "" ? "" : mcData.Groups[2].Value;
+            //Regex regFight = new Regex(@"(?s)<p><em><span title=.*?>(\d*)</span></em></p>");
+            //Match mcFight = regFight.Match(html);
+            //this.Fight = mcFight.Groups[1].Value == "0" ? "无" : mcFight.Groups[1].Value;
 
-            Regex regSolo = new Regex(@"(?m)<td>5v5单人</td>[\s\S]*?<td>(\d*)</td>");
-            Match mcSolo = regSolo.Match(html);
-            this.SoloRank = mcSolo.Groups[1].Value == "" ? "无" : mcSolo.Groups[1].Value;
+            //Regex regSolo = new Regex(@"(?m)<td>5v5单人</td>[\s\S]*?<td>(\d*)</td>");
+            //Match mcSolo = regSolo.Match(html);
+            //this.SoloRank = mcSolo.Groups[1].Value == "" ? "无" : mcSolo.Groups[1].Value;
 
-            Regex regTeam = new Regex(@"(?m)<td>5v5组队</td>[\s\S]*?<td>(\d*)</td>");
-            Match mcTeam = regTeam.Match(html);
-            this.TeamRank = mcTeam.Groups[1].Value == "" ? "无" : mcTeam.Groups[1].Value;
+            //Regex regTeam = new Regex(@"(?m)<td>5v5组队</td>[\s\S]*?<td>(\d*)</td>");
+            //Match mcTeam = regTeam.Match(html);
+            //this.TeamRank = mcTeam.Groups[1].Value == "" ? "无" : mcTeam.Groups[1].Value;
         }
 
+        public string Level { get; set; }
+        public string WinPoint { get; set; }
         
-        public string Fight { get; set; }
-        public string SoloRank { get; set; }
-        public string TeamRank { get; set; }
+        //public string Fight { get; set; }
+        //public string SoloRank { get; set; }
+        //public string TeamRank { get; set; }
 
     }
 }

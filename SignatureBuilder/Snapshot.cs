@@ -52,9 +52,7 @@ namespace SignatureBuilder
    
         }
 
-        string fightInit = "";
-        string soloInit = "";
-        string teamInit = "";
+        string lvdata = "";
 
         void Snapshot_Load(object sender, EventArgs e)
         {
@@ -203,16 +201,18 @@ namespace SignatureBuilder
 
             string severname = lList.GetSeverDataById(this.SeverName.Tag.ToString());
             Datas.WebDatas wb = new Datas.WebDatas(severname, Fts["SummorName"].text);
-            switch (rankdisplay)
-            {
-                case "Fight": Fts["RankName"].text = "战斗力:" + wb.Fight; break;
-                case "SoloRank": Fts["RankName"].text = "5v5单人:" + wb.SoloRank; break;
-                case "TeamRank": Fts["RankName"].text = "5v5组队:" + wb.TeamRank; break;
-            }
+            Fts["RankName"].text =   wb.Level + "  " + wb.WinPoint;
+            //switch (rankdisplay)
+            //{
+            //    case "Fight": Fts["RankName"].text = "战斗力:" + wb.Fight; break;
+            //    case "SoloRank": Fts["RankName"].text = "5v5单人:" + wb.SoloRank; break;
+            //    case "TeamRank": Fts["RankName"].text = "5v5组队:" + wb.TeamRank; break;
+            //}
             SetPanelSize(this.RankName);
-            fightInit = wb.Fight;
-            soloInit = wb.SoloRank;
-            teamInit = wb.TeamRank;
+            lvdata =   wb.Level  + "  " + wb.WinPoint;
+            //fightInit = wb.Fight;
+            //soloInit = wb.SoloRank;
+            //teamInit = wb.TeamRank;
 
 
             #endregion
@@ -646,12 +646,12 @@ namespace SignatureBuilder
 
         void RefreshRankMode()
         {
-            switch (rankdisplay)
-            {
-                case "Fight": Fts["RankName"].text = "战斗力:" + fightInit; break;
-                case "SoloRank": Fts["RankName"].text = "5v5单人:" + soloInit; break;
-                case "TeamRank": Fts["RankName"].text = "5v5组队:" + teamInit; break;
-            }
+            //switch (rankdisplay)
+            //{
+            //    case "Fight": Fts["RankName"].text = "所在组:" + fightInit; break;
+            //    case "SoloRank": Fts["RankName"].text = "5v5单人:" + soloInit; break;
+            //    case "TeamRank": Fts["RankName"].text = "5v5组队:" + teamInit; break;
+            //}
             SetPanelSize(RankName);
             this.RankName.Invalidate();
             this.RankName.Show();
@@ -659,48 +659,48 @@ namespace SignatureBuilder
 
         void RankMode_VisibleChanged(object sender, EventArgs e)
         {
-            if (RankMode.Visible) 
-            {
-                switch (rankdisplay)
-                {
-                    case "Fight": rb_fight.Checked = true ; break;
-                    case "SoloRank": rb_solorank.Checked = true; break;
-                    case "TeamRank": rb_teamrank.Checked = true ; break;
-                }
-            }
+            //if (RankMode.Visible) 
+            //{
+            //    switch (rankdisplay)
+            //    {
+            //        case "Fight": rb_Level.Checked = true ; break;
+            //        case "SoloRank": rb_WinPoint.Checked = true; break;
+            //        case "TeamRank": rb_teamrank.Checked = true ; break;
+            //    }
+            //}
         }
 
         void rb_fight_CheckedChanged(object sender, EventArgs e)
         {
-            RadioButton rb = sender as RadioButton;
-            if (rb.Checked) 
-            {
-                rankdisplay = "Fight";
-                RefreshRankMode();
-                this.RankMode.Hide();
-            }
+            //RadioButton rb = sender as RadioButton;
+            //if (rb.Checked) 
+            //{
+            //    rankdisplay = "Fight";
+            //    RefreshRankMode();
+            //    this.RankMode.Hide();
+            //}
         }
 
         void rb_solorank_CheckedChanged(object sender, EventArgs e)
         {
-            RadioButton rb = sender as RadioButton;
-            if (rb.Checked)
-            {
-                rankdisplay = "SoloRank";
-                RefreshRankMode();
-                this.RankMode.Hide();
-            }
+            //RadioButton rb = sender as RadioButton;
+            //if (rb.Checked)
+            //{
+            //    rankdisplay = "SoloRank";
+            //    RefreshRankMode();
+            //    this.RankMode.Hide();
+            //}
         }
 
         void rb_teamrank_CheckedChanged(object sender, EventArgs e)
         {
-            RadioButton rb = sender as RadioButton;
-            if (rb.Checked)
-            {
-                rankdisplay = "TeamRank";
-                RefreshRankMode();
-                this.RankMode.Hide();
-            }
+            //RadioButton rb = sender as RadioButton;
+            //if (rb.Checked)
+            //{
+            //    rankdisplay = "TeamRank";
+            //    RefreshRankMode();
+            //    this.RankMode.Hide();
+            //}
         }
 
         void RankName_MouseDoubleClick(object sender, MouseEventArgs e)

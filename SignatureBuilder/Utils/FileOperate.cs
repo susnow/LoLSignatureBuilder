@@ -151,7 +151,8 @@ namespace SignatureBuilder.Utils
         {
             string client = xmlconfig.LoLFilepath;
             string spell = client.Substring(0, client.LastIndexOf("\\") - 4);
-            spell += "Air\\assets\\images\\championScreens\\abilities\\";
+            //spell += "Air\\assets\\images\\championScreens\\abilities\\";
+            spell += "Air\\assets\\images\\abilities\\";
             return spell;
         }
 

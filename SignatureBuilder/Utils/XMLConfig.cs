@@ -13,7 +13,7 @@ namespace SignatureBuilder.Utils
     public class XMLConfig
     {
         string myDocument = Environment.GetFolderPath(Environment.SpecialFolder.MyDocuments);
-        string curVersion = "2.2";
+        string curVersion = "2.5";
 
         public string GetXmlNodeValue(string key)
         {

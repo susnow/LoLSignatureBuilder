@@ -170,11 +170,11 @@ namespace SignatureBuilder.Datas
                     new Skin(Annie,8,"","你看见过我的熊猫吗"),
 				};
                 Annie.Spells = new List<Spell>() { 
-                    new Spell("Annie_Disintegrate","q"),
-                    new Spell("Annie_Incinerate","w"),
-                    new Spell("Annie_GhastlyShield","e"),
-                    new Spell("Annie_GuardianIncinerate","r"),
-                    new Spell("Annie_Brilliance","t"),
+                    new Spell("Annie_Q","q"),
+                    new Spell("Annie_W","w"),
+                    new Spell("Annie_E","e"),
+                    new Spell("Annie_R1","r"),
+                    new Spell("Annie_Passive","t"),
                 };
 				Annie.Tags = new List<string>() { "远程", "法术" };
 				cList.Add(Annie.EnName, Annie);
@@ -221,6 +221,7 @@ namespace SignatureBuilder.Datas
 					new Skin(Blitzcrank,3,"Boom Boom","擂台皇帝"),
 					new Skin(Blitzcrank,4,"Piltover Customs","陆地王者4WD"),
 					new Skin(Blitzcrank,5,"Definitely","戴一个表"),
+                    new Skin(Blitzcrank,6,"iRobot","我,机器人"),
 				};
                 Blitzcrank.Spells = new List<Spell>() {
                     new Spell("Blitzcrank_RocketGrab","q"),
@@ -675,6 +676,7 @@ namespace SignatureBuilder.Datas
 					new Skin(Garen,3,"Commando","铁甲雄心"),
 					new Skin(Garen,4,"Dreadknight","死亡骑士"),
 					new Skin(Garen,5,"Rugged","孤高游侠"),
+                    new Skin(Garen,6,"","钢铁军团"),
 				};
                 Garen.Spells = new List<Spell>() {
                     new Spell ("Garen_DecisiveStrike","q"),
@@ -904,6 +906,7 @@ namespace SignatureBuilder.Datas
 				Jayce.Skins = new List<Skin>() {
 					new Skin(Jayce,0,"Classic","经典"),
 					new Skin(Jayce,1,"Full Metal","全金属狂潮"),
+                    new Skin(Jayce,2,"","蔷薇绅士"),
 				};
                 Jayce.Spells = new List<Spell>() {
                     new Spell ("Jayce_ToTheSkies","q"),
@@ -1222,7 +1225,7 @@ namespace SignatureBuilder.Datas
 				Champion Lux = new Champion();
 				Lux.EnName = "Lux";
 				Lux.CnName = "拉克丝";
-				Lux.DefaultName = "拉克丝";
+				Lux.DefaultName = "光辉女郎";
 				Lux.Portrait = fo.GetAirChampionPortrait(Lux);
 
 				Lux.ShortName = new List<string> { "光辉" };
@@ -1232,6 +1235,7 @@ namespace SignatureBuilder.Datas
 					new Skin(Lux,2,"Spellthief","游侠法师"),
 					new Skin(Lux,3,"Commando","ODST地狱伞兵"),
 					new Skin(Lux,4,"Imperial","星际迷航"),
+                    new Skin(Lux,5,"","钢铁军团"),
 				};
                 Lux.Spells = new List<Spell>() {
                     new Spell ("LuxCrashingBlitz2","q"),
@@ -1695,6 +1699,29 @@ namespace SignatureBuilder.Datas
                 };
 				Poppy.Tags = new List<string>() { "近战", "物理" };
 				cList.Add(Poppy.EnName, Poppy);
+
+                Champion Quinn = new Champion();
+                Quinn.EnName = "Quinn";
+                Quinn.CnName = "奎恩";
+                Quinn.DefaultName = "德玛西亚之翼";
+                Quinn.Portrait = fo.GetAirChampionPortrait(Quinn);
+                Quinn.ShortName = new List<string> { "奎爷" };
+                Quinn.Skins = new List<Skin>()
+                {
+                    new Skin(Quinn,0,"Classic","经典"),
+                    new Skin(Quinn,1,"Phoenix","血羽凤凰"),
+                };
+                Quinn.Spells = new List<Spell> 
+                {
+                    new Spell("Quinn_Q","q"),
+                    new Spell("Quinn_W","w"),
+                    new Spell("Quinn_E","e"),
+                    new Spell("Quinn_R1","r"),
+                    new Spell("Quinn_Passive","t"),
+                };
+                Quinn.Tags = new List<string>() { "物理", "远程" };
+                cList.Add(Quinn.EnName, Quinn);
+
 
 				//拉莫斯 披甲龙龟
 				Champion Rammus = new Champion();
@@ -2789,7 +2816,29 @@ namespace SignatureBuilder.Datas
 					new Spell ("ZyraR","r"),
 					new Spell ("ZyraP","t"),
                 };
-				cList.Add(Zyra.EnName, Zyra);
+                cList.Add(Zyra.EnName, Zyra);
+                //扎克 生化魔人
+                Champion Zac = new Champion();
+                Zac.EnName = "Zac";
+                Zac.CnName = "扎克";
+                Zac.DefaultName = "生化魔人";
+                Zac.Portrait = fo.GetAirChampionPortrait(Zac);
+                Zac.ShortName = new List<string> { "软泥", "泡泡" };
+                Zac.Skins = new List<Skin>()
+                {
+                    new Skin(Zac,0,"Classic","经典"),
+                    new Skin(Zac,1,"","幽能武器"),
+                };
+                Zac.Tags = new List<string>() { "近战","法术","打野"};
+                Zac.Spells = new List<Spell>() 
+                {
+                    new Spell("ZacQ","q"),
+                    new Spell("ZacW","w"),
+                    new Spell("ZacE","e"),
+                    new Spell("ZacR","r"),
+                    new Spell("ZacPassive","t"),
+                };
+                cList.Add(Zac.EnName, Zac);
 
 
 				return cList;
